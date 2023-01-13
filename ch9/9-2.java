@@ -34,7 +34,7 @@ class Node2 implements Comparable<Node2> {
 public class Main2 {
     public static final int INF = (int) 1e9;
     public static int n, m, start;
-    public static ArrayList<ArrayList<Node>> graph = new ArrayList<ArrayList<Node>>();
+    public static ArrayList<ArrayList<Node2>> graph = new ArrayList<ArrayList<Node2>>();
     public static int[] d = new int[100001];
 
     public static void dijkstra(int start) {
@@ -64,14 +64,14 @@ public class Main2 {
         start = sc.nextInt();
 
         for (int i = 0; i <= n; i++) {
-            graph.add(new ArrayList<Node>());
+            graph.add(new ArrayList<Node2>());
         }
 
         for (int i = 0; i < m; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
             int c = sc.nextInt();
-            graph.get(a).add(new Node(b, c));
+            graph.get(a).add(new Node2(b, c));
         }
 
         Arrays.fill(d, INF);
